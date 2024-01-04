@@ -20,6 +20,6 @@
   "dependencies": {
     "http-server": "^14.1.1",
     "jsdom": "^23.0.1",
-    "parcel": "^2.0.0-nightly.1469"
+    "parcel": "^2.10.3"
   }
 }
