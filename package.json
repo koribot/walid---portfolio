@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-http": "http-server -c-1",
-    "dev-parcel": "parcel index.html",
+    "parcel": "parcel index.html",
     "build": "node src/Kori/builder.js"
   },
   "author": "",
