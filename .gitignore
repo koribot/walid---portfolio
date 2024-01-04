@@ -1,0 +1,9 @@
+
+*.sw*
+dist
+.cache
+node_modules
+npm-debug.log*
+.parcel-cache
+kori-dist
+test.js

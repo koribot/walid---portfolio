@@ -1,0 +1,43 @@
+@keyframes blink {
+
+ 0%,
+ 100% {
+  color: transparent;
+ }
+
+ 100% {
+  color: white;
+ }
+}
+
+
+
+.input-container {
+ position: relative;
+ width: 100%;
+}
+
+.custom-input {
+ /* caret-color: transparent; */
+ background-color: transparent;
+ width: 100%;
+ min-width: 100vh;
+ /* border-bottom: 1px solid white; */
+ color: white;
+ height: 20px;
+}
+
+
+
+.blinker {
+ position: fixed;
+ margin-left: 5px;
+ animation: blink 1s infinite;
+ font-weight: bold;
+}
+
+
+.pre-text {
+ animation: blink 1s infinite;
+ transform: translateX(3);
+}
