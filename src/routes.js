@@ -1,7 +1,6 @@
 import app from "./app.js"
 import About from "../Pages/About.js"
-import { componentA } from './componenta';
-import NotFound from "../Pages/NotFound.js";
+import NotFound from "../Pages/404.js";
 
 
 export const routes = () => {
