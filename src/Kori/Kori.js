@@ -37,6 +37,8 @@ export const Kori = (() => {
       visitedPaths.add(path);
       if (absolutePath.charAt(0) !== "/") {
         const b = window.history.pushState(null, null, "/" + path);
+      } else {
+        const b = window.history.pushState(null, null, "/" + path);
       }
 
 
