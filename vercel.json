@@ -1,11 +1,8 @@
 {
- "routes": [
+ "rewrites": [
   {
-   "handle": "filesystem"
-  },
-  {
-   "src": "/404",
-   "dest": "/pages/404.js"
+   "source": "/(.*)",
+   "destination": "/index.html"
   }
  ]
 }
