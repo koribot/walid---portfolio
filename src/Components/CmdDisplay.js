@@ -70,6 +70,7 @@ setScript(
       const targetValue = e.target[0].value
       if (getDisplayLists(targetValue)[0] === 'Goto') {
         router(null, getDisplayLists(targetValue)[1])
+        console.log(getDisplayLists(targetValue)[1])
       }
 
       const r = states.CmdDisplay.resultLists

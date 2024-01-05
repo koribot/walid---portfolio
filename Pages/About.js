@@ -45,6 +45,7 @@ export const About = () => {
  return `
    <div class="bg-gradient-to-r min-h-[100vh] from-[#232b2b] to-[#232b2b] p-8 rounded-md shadow-md p-8 rounded-md shadow-md w-full animate__animated animate__fadeIn">
      <h1 class="text-3xl font-bold mb-4 text-white">Hello</h1>
+     <a href='prevReload-https://www.facebook.com' target='_blank'>Hello</a>
     <button >Click</button>
      <div class="mb-6">
        <h2 class="text-xl font-semibold mb-2 text-white">A Bit About Me</h2>
