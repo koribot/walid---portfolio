@@ -6,6 +6,7 @@ import NotFound from "../Pages/NotFound.js";
 
 export const routes = () => {
  const currentLocation = window.location.pathname
+ console.log(currentLocation)
  const routes = {
   "/": app,
   "/about": About

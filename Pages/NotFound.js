@@ -2,9 +2,12 @@
 
 
 export const NotFound = () => {
- const location = window.location.pathname
+  const underConstruction = ['/projects/eBextractor', '/projects/ebex-api', '/projects/koribotjs']
+  // console.log(underConstruction.find('/projects/koribotjs'))
 
- return `
+  const location = window.location.pathname
+
+  return `
  <div class='flex bg-[#232b2b] items-center justify-center h-screen'>
   <div class="text-white text-center">
     <h1 class="text-4xl font-bold mb-4">404 - Not Found</h1>
