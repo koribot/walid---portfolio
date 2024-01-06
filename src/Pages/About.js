@@ -116,8 +116,7 @@ export const About = () => {
 
      <div class="mb-6 text-white">
        <h2 class="text-xl font-semibold mb-2 text-white">Contacts</h2>
-       <p class="text-gray-100">Email: info@example.com</p>
-       <p class="text-gray-100">Phone: (123) 456-7890</p>
+       <p class="text-gray-100">Email: w.cawasa@gmail.com</p>
        <p>
         Facebook: <a class='ml-1' href='prevReload-https://www.facebook.com/wcawasa' target='_blank'> @wcawasa</a>
        </p>
