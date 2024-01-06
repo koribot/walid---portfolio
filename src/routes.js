@@ -1,11 +1,10 @@
 import app from "./app.js"
-import About from "../Pages/About.js"
-import NotFound from "../Pages/404.js";
+import About from "./Pages/About.js"
+import NotFound from "./Pages/404.js";
 
 
 export const routes = () => {
  const currentLocation = window.location.pathname
- console.log(currentLocation)
  const routes = {
   "/": app,
   "/about": About
