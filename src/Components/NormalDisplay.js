@@ -12,6 +12,7 @@ export const NormalDisplay = () => {
     </div>
     <div>
       <img src='public/walid.jpg'/>
+      sample
     </div>
    </div>
 
