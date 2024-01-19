@@ -104,12 +104,12 @@ export const About = () => {
        <h2 class="text-xl font-semibold mb-2 text-white">Tech Stack</h2>
        <p class="text-gray-100">
         <ul class='flex  text-white gap-5 mt-5'>
-          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="https://cdn-icons-png.flaticon.com/512/1532/1532556.png"/></li>
-          <li class='flex items-center'><img class='w-[50px] ' src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png"/></li>
-          <li class='flex items-center'><img class='w-[50px] ' src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/html.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/tail.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] ' src="public/css.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/jscript.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/react.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/nextjs.png"/></li>
         </ul>
        </p>
      </div>

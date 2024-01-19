@@ -67,10 +67,9 @@ setScript(
 
     submit: (e) => {
       e.preventDefault()
-      const targetValue = e.target[0].value
-      if (getDisplayLists(targetValue)[0] === 'Goto') {
+      const targetValue = e.target[0].value.toLowerCase()
+      if (getDisplayLists(targetValue)[0] === 'goto') {
         router(null, getDisplayLists(targetValue)[1])
-        console.log(getDisplayLists(targetValue)[1])
       }
 
       const r = states.CmdDisplay.resultLists
@@ -79,7 +78,7 @@ setScript(
         r.push(targetValue)
       }
 
-      if (targetValue === 'Clear') {
+      if (targetValue === 'clear') {
         r.length = []
       }
 
@@ -96,7 +95,7 @@ setScript(
       e.target[0].value = ""
       e.target[0].focus()
 
-      if (getDisplayLists(targetValue)[0] === 'Goto') {
+      if (getDisplayLists(targetValue)[0] === 'goto') {
         router(null, getDisplayLists(targetValue)[1])
       }
     }

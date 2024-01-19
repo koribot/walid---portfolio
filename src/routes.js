@@ -1,14 +1,23 @@
 import app from "./app.js"
 import About from "./Pages/About.js"
 import NotFound from "./Pages/404.js";
+import { states } from "./Kori/Kori.js";
 
 
 export const routes = () => {
  const currentLocation = window.location.pathname
- const routes = {
-  "/": app,
-  "/about": About
+ let routes = {}
+ if (states.mode.mode === 'cmd') {
+  routes = {
+   "/": app,
+   "/about": About
+  }
+ } else {
+  routes = {
+   "/": app,
+  }
  }
+
  return routes[currentLocation] ? routes[currentLocation] : NotFound
 
 }

@@ -20,22 +20,35 @@ let $rootEl = mount(realApp, document.getElementById('kori-root')); // Mount the
 
 window.addEventListener('resize', function (e) {
   if (window.innerWidth > 700) {
-    window.localStorage.setItem('mode', 'cmd')
-    setState(
-      'mode',
-      {
-        mode: 'cmd'
-      }
-    )
-  } else {
-    window.localStorage.setItem('mode', 'normal')
+    var currentMode = window.localStorage.getItem('mode');
+    if (currentMode) {
+      window.localStorage.setItem('mode', currentMode)
+      window.localStorage.setItem('window', 'pc')
+      setState(
+        'mode',
+        {
+          mode: currentMode,
+          windowSize: 'pc'
+        }
+      )
+    }
 
-    setState(
-      'mode',
-      {
-        mode: 'normal'
-      }
-    )
+
+
+  } else {
+    var currentMode = window.localStorage.getItem('mode');
+    if (currentMode) {
+      window.localStorage.setItem('mode', currentMode)
+      window.localStorage.setItem('window', 'phone')
+      setState(
+        'mode',
+        {
+          mode: 'normal',
+          windowSize: 'phone'
+        }
+      )
+    }
+
   }
 
 });
@@ -44,9 +57,8 @@ window.addEventListener('resize', function (e) {
 // Acts as a renderer of the virtualApp when state changes, this is triggred everytime you use setState function or using router
 Kori.track.start = async () => {
   const vNewApp = await createVirtualApp();
-
   const patch = diff(await virtualApp, await vNewApp);
-  $rootEl = await patch($rootEl);
+  $rootEl = patch($rootEl);
   virtualApp = vNewApp;
 }
 

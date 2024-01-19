@@ -41,7 +41,7 @@ export const DisplayLists = (Display) => {
      This portfolio is powered by it. 
   ` },
   ]
-  const lists = { Pages: Pages, Games: Games, Projects: Projects }
+  const lists = { pages: Pages, games: Games, projects: Projects }
 
   return `
   ${lists[Display] ? `<div class='wrapper'>

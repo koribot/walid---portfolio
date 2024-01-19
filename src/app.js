@@ -1,18 +1,21 @@
 import CmdDisplay from "./Components/CmdDisplay.js";
+import Footer from "./Components/Footer.js";
 import { mode } from "./Components/mode.js";
 import Navbar from "./Components/Navbar.js";
+import NormalDisplay from "./Components/NormalDisplay.js";
 import insert from "./Kori/insert.js";
 import Kori, { setScript, setState, states } from "./Kori/Kori.js";
 
 
-
-
-export const app = (count) => {
+//  ${states.mode.mode === 'normal' ? NormalNavbar() : Navbar()}
+export const app = () => {
   return `
-  <div class='bg-[#232b2b] min-h-[100vh] h-full'>
-     ${mode()}
+  <div class='${states.mode.mode === 'cmd' ? 'bg-[#232b2b]' : 'bg-[#121313]'} min-h-[100vh] h-full'>
+     ${window.localStorage.getItem('window') ? window.localStorage.getItem('window') === 'pc' ? mode() : '' : window.localStorage.setItem('window', 'pc')}
      ${Navbar()}
      ${states.mode.mode === 'cmd' ? CmdDisplay() : ''}
+     ${states.mode.mode === 'normal' ? NormalDisplay() : ''}
+     ${Footer()}
   </div>
 `
 }
