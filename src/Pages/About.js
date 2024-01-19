@@ -105,7 +105,7 @@ export const About = () => {
        <p class="text-gray-100">
         <ul class='flex  text-white gap-5 mt-5'>
           <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/html.png"/></li>
-          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/tail.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/tailwind.png"/></li>
           <li class='flex items-center'><img class='w-[50px] ' src="public/css.png"/></li>
           <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/jscript.png"/></li>
           <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/react.png"/></li>

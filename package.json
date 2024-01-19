@@ -5,9 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-http": "http-server -c-1",
-    "parcel": "mkdir dist\\public 2>nul && xcopy public\\* dist\\public /E /Y && parcel index.html",
-    "build": "parcel build index.html",
-    "postinstall": "mkdir dist && cp -r public/* dist/"
+    "parcel": "rm -rf dist && mkdir dist\\public && xcopy public\\* dist\\public /E /Y && parcel index.html",
+    "build": "rm -rf dist && mkdir -p dist/public && cp -r public/* dist/public && parcel build index.html"
   },
   "author": "",
   "license": "ISC",
