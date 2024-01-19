@@ -104,12 +104,12 @@ export const About = () => {
        <h2 class="text-xl font-semibold mb-2 text-white">Tech Stack</h2>
        <p class="text-gray-100">
         <ul class='flex  text-white gap-5 mt-5'>
-          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/html.png"/></li>
-          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="public/tail.png"/></li>
-          <li class='flex items-center'><img class='w-[50px] ' src="public/css.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/jscript.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/react.png"/></li>
-          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/nextjs.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="/html.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] h-[50px]' src="/tail.png"/></li>
+          <li class='flex items-center'><img class='w-[50px] ' src="/css.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="/jscript.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="/react.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="/nextjs.png"/></li>
         </ul>
        </p>
      </div>
