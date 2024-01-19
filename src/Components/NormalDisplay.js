@@ -11,7 +11,7 @@ export const NormalDisplay = () => {
      <h1 class='text-[20px]'>I am Walid Labawan Cawasa</h1>
     </div>
     <div>
-      <img src='public/css.png'/>
+      <img src='public/walid.jpg'/>
     </div>
    </div>
 
