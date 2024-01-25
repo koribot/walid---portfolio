@@ -14,7 +14,7 @@ export const DisplayLists = (Display) => {
   ]
   const Projects = [
     {
-      name: 'eBextractor', path: '/projects/eBextractor', desc: `
+      name: 'eBextractor', repo: '', live: 'https://chromewebstore.google.com/detail/ikfpolbfdnihjnadfodochmagdagpbik', desc: `
   🔍 The eBay Search Data Extraction Extension offers data analysis 
       for single-page search results, providing valuable insights through the following features:
 
@@ -26,11 +26,11 @@ export const DisplayLists = (Display) => {
 - 💲 Price Occurrence: Gain an understanding of how often different price points appear in the search results.
   ` },
     {
-      name: 'eBex - API', path: '/projects/ebex-api', desc: `
+      name: 'eBex - API', repo: 'https://github.com/koribot/ebextractor-api-flask', live: 'https://ebextractor-v1.vercel.app/api/extract/using_keyword?q=shoes', desc: `
    API that is intended for my ebextractor but it is a free to use API
   ` },
     {
-      name: 'koribotJS', path: '/projects/koribotjs', desc: `
+      name: 'koribotJS', repo: 'https://github.com/koribot/koribotJS', live: '#', desc: `
     koribotJS is a hobby project, it is unoptimized, messy Component Based 
     Javascript framework/library. 
     - It uses diffing, patching and rendering algorigthm
@@ -39,6 +39,10 @@ export const DisplayLists = (Display) => {
     
 
      This portfolio is powered by it. 
+  ` },
+    {
+      name: 'eBex Web Scraper', repo: 'https://github.com/koribot/ebex-scraper-web', live: 'https://ebex-scraper-web.vercel.app', desc: `
+      A nextjs web version of my chrome extension - UNDER 🚧. 
   ` },
   ]
   const lists = { pages: Pages, games: Games, projects: Projects }
@@ -50,15 +54,48 @@ export const DisplayLists = (Display) => {
        <thead>
          <tr>
            <th class='text-white'>Name</th>
-           <th class='text-white'>Path</th>
-           <th class='text-white'>Description</th>
+           ${Display === 'projects'
+        ?
+        `
+         <th class='text-white'>Repo</th>
+         <th class='text-white'>Live</th>
+         `
+        :
+        `
+         <th class='text-white'>path</th>
+         `
+      }
+      <th class='text-white'>Description</th>
+
+           
          </tr>
        </thead>
        <tbody class='overflow-x-auto'>
          ${lists[Display].map((items) => `
            <tr>
              <td class='text-white'>${items.name}</td>
-             <td class='text-white'>${items.path}</td>
+             ${Display === 'projects'
+          ?
+          `
+            <td class='text-white'>
+            <a href=${items.name !== 'eBextractor' ? `prevReload-${items.repo}` : '#'} target='_blank'>
+            ${items.name !== 'eBextractor' ? `Click` : 'Repo is Private'}
+            </a>
+           </td>
+           <td class='text-white'>
+           <a href=${items.name !== 'koribotJS' ? `prevReload-${items.live}` : '#'} target='_blank'>
+           ${items.name !== 'koribotJS' ? `Click` : 'No WebSite Yet'}
+           </a>
+           </td>
+            `
+          :
+          `
+            <td class='text-white'>
+            ${items.path}
+           </td>
+            `
+        }
+            
              <td class='text-white'><pre>${items.desc}</pre></td>
            </tr>
          `).join('')}

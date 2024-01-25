@@ -47,16 +47,13 @@
 @keyframes slideInFromRight {
  0% {
   transform: translateX(100%);
-  opacity: 0;
  }
 
  100% {
   transform: translateX(0);
-  opacity: 1;
  }
 }
 
 .slide-in-from-right {
- animation: slideInFromRight 1s ease;
- /* Adjust the duration and timing function as needed */
+ animation: slideInFromRight .5s ease;
 }

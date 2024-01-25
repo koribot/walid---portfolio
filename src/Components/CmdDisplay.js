@@ -3,7 +3,6 @@ import '../styles/Cmd.css'
 import { getDisplayLists } from '../utils/getDisplayLists.js';
 import { isValidCommand } from '../utils/isValidCommand.js';
 import DisplayLists from './DisplayLists';
-import Help from './Help.js';
 
 
 setState(
@@ -75,7 +74,10 @@ setScript(
       const r = states.CmdDisplay.resultLists
 
       if (isValidCommand(targetValue)) {
-        r.push(targetValue)
+        if (getDisplayLists(targetValue)[0] === 'display') {
+
+          r.push(targetValue)
+        }
       }
 
       if (targetValue === 'clear') {

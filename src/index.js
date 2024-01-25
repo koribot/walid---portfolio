@@ -18,8 +18,48 @@ let $rootEl = mount(realApp, document.getElementById('kori-root')); // Mount the
 
 
 
-window.addEventListener('resize', function (e) {
-  if (window.innerWidth > 700) {
+// window.addEventListener('resize', function (e) {
+//   if (window.innerWidth > 700) {
+//     var currentMode = window.localStorage.getItem('mode');
+//     if (currentMode) {
+//       window.localStorage.setItem('mode', currentMode)
+//       window.localStorage.setItem('window', 'pc')
+//       setState(
+//         'mode',
+//         {
+//           mode: currentMode,
+//           windowSize: 'pc'
+//         }
+//       )
+//     }
+
+
+
+//   } else {
+//     var currentMode = window.localStorage.getItem('mode');
+//     if (currentMode) {
+//       window.localStorage.setItem('mode', currentMode)
+//       window.localStorage.setItem('window', 'phone')
+//       setState(
+//         'mode',
+//         {
+//           mode: "normal",
+//           windowSize: 'phone'
+//         }
+//       )
+//     }
+
+//   }
+
+// });
+
+
+// Define a media query (e.g., for screens larger than 768px)
+const mediaQuery = window.matchMedia('(min-width: 700px)');
+
+// Function to handle the changes in screen size
+function handleScreenSizeChange(event) {
+  if (event.matches) {
     var currentMode = window.localStorage.getItem('mode');
     if (currentMode) {
       window.localStorage.setItem('mode', currentMode)
@@ -33,26 +73,25 @@ window.addEventListener('resize', function (e) {
       )
     }
 
-
-
   } else {
     var currentMode = window.localStorage.getItem('mode');
     if (currentMode) {
-      window.localStorage.setItem('mode', currentMode)
+      window.localStorage.setItem('mode', 'normal')
       window.localStorage.setItem('window', 'phone')
       setState(
         'mode',
         {
-          mode: 'normal',
+          mode: "normal",
           windowSize: 'phone'
         }
       )
     }
-
   }
+}
 
-});
+mediaQuery.addListener(handleScreenSizeChange);
 
+handleScreenSizeChange(mediaQuery);
 
 // Acts as a renderer of the virtualApp when state changes, this is triggred everytime you use setState function or using router
 Kori.track.start = async () => {
@@ -61,6 +100,7 @@ Kori.track.start = async () => {
   $rootEl = patch($rootEl);
   virtualApp = vNewApp;
 }
+
 
 
 
