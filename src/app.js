@@ -5,12 +5,15 @@ import Navbar from "./Components/Navbar.js";
 import NormalDisplay from "./Components/NormalDisplay.js";
 import insert from "./Kori/insert.js";
 import Kori, { setScript, setState, states } from "./Kori/Kori.js";
+import { handleScreenSizeChange } from './index.js';
 
 if (window.localStorage.getItem('window') === null) {
   window.localStorage.setItem('window', 'pc')
 }
 
-//  ${states.mode.mode === 'normal' ? NormalNavbar() : Navbar()}
+const mediaQuery = window.matchMedia('(min-width: 700px)');
+handleScreenSizeChange(mediaQuery)
+
 export const app = () => {
   return `
   <div class='${states.mode.mode === 'cmd' ? 'bg-[#232b2b]' : 'bg-[#121313]'} min-h-[100vh] h-full'>

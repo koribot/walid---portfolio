@@ -6,6 +6,10 @@ import Kori, { router, setState } from './Kori/Kori.js';
 import routes from './routes.js';
 import './styles/Index.css'
 
+
+
+
+
 const createVirtualApp = () => processHTML(
   routes()() // routes returns a component(function) that needs to be called '()' so processHTML(htmlString) can process it
 )
@@ -58,7 +62,7 @@ let $rootEl = mount(realApp, document.getElementById('kori-root')); // Mount the
 const mediaQuery = window.matchMedia('(min-width: 700px)');
 
 // Function to handle the changes in screen size
-function handleScreenSizeChange(event) {
+export function handleScreenSizeChange(event) {
   if (event.matches) {
     var currentMode = window.localStorage.getItem('mode');
     if (currentMode) {
@@ -71,25 +75,26 @@ function handleScreenSizeChange(event) {
           windowSize: 'pc'
         }
       )
+    } else {
+      window.localStorage.setItem('mode', 'cmd')
+      window.localStorage.setItem('window', 'pc')
     }
 
   } else {
-    var currentMode = window.localStorage.getItem('mode');
-    if (currentMode) {
-      window.localStorage.setItem('mode', 'normal')
-      window.localStorage.setItem('window', 'phone')
-      setState(
-        'mode',
-        {
-          mode: "normal",
-          windowSize: 'phone'
-        }
-      )
-    }
+    window.localStorage.setItem('mode', 'normal')
+    window.localStorage.setItem('window', 'phone')
+    setState(
+      'mode',
+      {
+        mode: "normal",
+        windowSize: 'phone'
+      }
+    )
+
   }
 }
 
-mediaQuery.addListener(handleScreenSizeChange);
+mediaQuery.addEventListener('change', handleScreenSizeChange);
 
 handleScreenSizeChange(mediaQuery);
 
