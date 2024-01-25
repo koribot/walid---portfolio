@@ -6,6 +6,9 @@ import NormalDisplay from "./Components/NormalDisplay.js";
 import insert from "./Kori/insert.js";
 import Kori, { setScript, setState, states } from "./Kori/Kori.js";
 
+if (window.localStorage.getItem('window') === null) {
+  window.localStorage.setItem('window', 'pc')
+}
 
 //  ${states.mode.mode === 'normal' ? NormalNavbar() : Navbar()}
 export const app = () => {
