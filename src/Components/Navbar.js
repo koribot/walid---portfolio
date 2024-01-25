@@ -4,42 +4,42 @@ import { Description } from "./Description.js"
 
 
 setState(
-	"navbar",
+    "navbar",
 
-	{
-		open: false
-	}
+    {
+        open: false
+    }
 
 )
 
 
 setScript(
-	"navbar",
-	{
-		openMenu: () => {
-			const current = states.navbar.open
-			setState(
-				"navbar",
+    "navbar",
+    {
+        openMenu: () => {
+            const current = states.navbar.open
+            setState(
+                "navbar",
 
-				{
-					open: current ? false : true
-				}
+                {
+                    open: current ? false : true
+                }
 
-			)
-		}
+            )
+        }
 
-	}
+    }
 )
 
 
 export const Navbar = () => {
 
 
-	return `
+    return `
 ${states.mode.mode === 'cmd'
-			?
+            ?
 
-			`<div class='p-[50px] text-center'>
+            `<div class='p-[50px] text-center'>
                     <h1 class='text-[50px] text-white'>
                     ✨Welcome✨
                     </h1>  
@@ -48,8 +48,8 @@ ${states.mode.mode === 'cmd'
                     </h1>
                     ${Description()}   
             </div> `
-			:
-			`
+            :
+            `
      
             <nav class="bg-gray-800 p-4 flex justify-center">
                 <div class="flex items-center justify-between">
@@ -73,8 +73,8 @@ ${states.mode.mode === 'cmd'
             </nav>
 
             <div class="lg:hidden" id="mobile-menu">
-                <button if-click='navbar-openMenu' id="burger-icon" class="absolute top-[-10px] left-1 text-[50px] text-white focus:outline-none">
-                 ${states.navbar.open ? "x" : "🍔"}
+                <button if-click='navbar-openMenu' id="burger-icon" class="absolute top-[0px] left-1 text-[50px] text-white focus:outline-none">
+                 ${states.navbar.open ? `<p class='ml-[5px] absolute top-[0px] left-1 text-[30px]'>X</p>` : `<img class='object-contain w-[60px] h-[50px]' src='public/burger-icon.png'/>`}
                 </button>
             
                 <ul id="mobile-menu-items" class="${states.navbar.open ? "block" : "hidden"} bg-gray-800 p-2 space-y-2 flex flex-col justify-center items-center">
@@ -85,7 +85,7 @@ ${states.mode.mode === 'cmd'
                 </ul>
             </div>
 `
-		}  
+        }  
  `
 
 }
