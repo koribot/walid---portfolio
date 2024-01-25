@@ -1,6 +1,7 @@
 import CmdDisplay from "../Components/CmdDisplay.js";
 import { setScript, setState, states } from "../Kori/Kori.js";
 import '../styles/About.css'
+
 const path = import.meta.url.replace('file://', '').split('/');
 path.pop(); // Remove the filename
 const basePath = path.join('/');
@@ -10,44 +11,44 @@ const basePath = path.join('/');
 //  const data = await response.json();
 //  return data;
 // }
-setState('About', {
-  typeWriterValue: '',
-});
+// setState('About', {
+//   typeWriterValue: '',
+// });
 
-const typeWriter = (callback) => {
-  const str = '|~Hello';
-  let i = 0;
-  const type = () => {
-    if (i < str.length) {
-      const currentChar = str.charAt(i);
+// const typeWriter = (callback) => {
+//   const str = '|~Hello';
+//   let i = 0;
+//   const type = () => {
+//     if (i < str.length) {
+//       const currentChar = str.charAt(i);
 
-      callback(str.slice(2, i + 1) + '|');
-      i++;
-      if (i === str.length) {
-        setTimeout(() => {
-          i = 0
-          type()
-        }, 500);
-      } else {
+//       callback(str.slice(2, i + 1) + '|');
+//       i++;
+//       if (i === str.length) {
+//         setTimeout(() => {
+//           i = 0
+//           type()
+//         }, 500);
+//       } else {
 
-        setTimeout(type, 300);
-      }
+//         setTimeout(type, 300);
+//       }
 
-    }
+//     }
 
-  };
+//   };
 
-  type();
-};
+//   type();
+// };
 
-const updateState = (char) => {
-  setState('About', {
-    typeWriterValue: char,
-  });
-};
+// const updateState = (char) => {
+//   setState('About', {
+//     typeWriterValue: char,
+//   });
+// };
 
 
-typeWriter(updateState);
+// typeWriter(updateState);
 
 
 
