@@ -22,8 +22,8 @@ export const NormalDisplay = () => {
   <div>
   <div class='separator-nav'>
   </div>
-   <div class='px-[60px] flex justify-center gap-[100px]'>
-      <div class='border rounded border-gray-600 text-white flex p-[50px]'>
+   <div class='px-[20px] lg:px-[60px] flex justify-center gap-[100px]'>
+      <div class='border rounded border-gray-600 text-white flex p-[10px] lg:p-[50px]'>
         <div ref='about' class="text-white flex flex-col gap-5 font-Helvetica">
           <div class='block md:hidden flex justify-center'>
             <img class='w-[150px]' src='public/walid-cawasa-profile.png'/>
@@ -34,9 +34,9 @@ export const NormalDisplay = () => {
             ${insert("<Hello>")}
             <span class="ml-2 wave">👋🏻</span>
             </h1>
-            <h1 class="text-2xl font-bold ml-5">I am Walid Labawan Cawasa</h1>
-            <p class="text-lg ml-5" >- I am an aspiring web developer</p>
-            <p class="text-lg ml-5">- I like to build stuffs</p>
+            <h1 class="text-sm lg:text-2xl font-bold ml-5">I am Walid Labawan Cawasa</h1>
+            <p class="lg:text-lg ml-5" >- I am an aspiring web developer</p>
+            <p class="lg:text-lg ml-5">- I like to build stuffs</p>
             <h1 class="text-sm lg:text-2xl flex mb-5">
             ${insert("</Hello>")}
             </h1>
@@ -63,16 +63,16 @@ export const NormalDisplay = () => {
           <p class="mt-[15px] italic text-lg">"Not the brightest but resourceful"</p>
         </div>
   
-        <div class='slide-in-from-right hidden md:block lg:block'>
-          <img src='public/walid-cawasa-profile.png'/>
+        <div class='overflow-hidden hidden md:block lg:block'>
+          <img class='slide-in-from-right ' src='public/walid-cawasa-profile.png'/>
         </div>
       </div>
    </div>
    <div class='separator'> 
    </div>
-   <div ref='projects' class='px-[60px] flex flex-col text-center justify-center items-center gap-5'>
+   <div ref='projects' class='px-[20px] lg:px-[60px] flex flex-col text-center justify-center items-center gap-5'>
     <div class='border border-gray-600 rounded p-[15px]'>
-          <h1 class='text-white text-2xl'>${insert('<Projects>')}</h1>
+          <h1 class='text-white lg:text-2xl'>${insert('<Projects>')}</h1>
           <div class='text-white grid lg:flex gap-5'>
             <div class='flex flex-col justify-start items-center'>
               <span class='hover:bg-gray-600 p-5 flex flex-col gap-[5px] rounded justify-center items-center'>
@@ -131,7 +131,7 @@ export const NormalDisplay = () => {
             </div>
 
           </div>
-          <h1 class='text-white text-2xl'>${insert('</Projects>')}</h1>
+          <h1 class='text-white mt-[20px] lg:text-2xl'>${insert('</Projects>')}</h1>
       </div>
    </div>
 
@@ -142,7 +142,7 @@ export const NormalDisplay = () => {
       <div class="container mx-auto px-8 flex justify-center">
         <div class="three-d-container flex justify-center gap-8">
             <div class="bg-gray-800 text-white p-6 rounded-md shadow-md flex flex-col">
-              <h1 class="text-sm lg:text-2xl text-center mb-5">
+              <h1 class="lg:text-2xl text-center mb-5">
                 ${insert("<Contact>")}
               </h1>
                 <h2 class="text-xl font-semibold mb-4">Let's Connect!</h2>
@@ -157,7 +157,7 @@ export const NormalDisplay = () => {
                       Github: <a class='ml-1' href='prevReload-https://github.com/koribot' target='_blank'> @koribot</a>
                      </li>
                 </ul>
-              <h1 class="text-sm lg:text-2xl mt-5 text-center">
+              <h1 class="lg:text-2xl mt-5 text-center">
                 ${insert("</Contact>")}
               </h1>
             </div>
@@ -167,7 +167,7 @@ export const NormalDisplay = () => {
    </div>
    <div class='separator'> 
    </div>
-   <div if-click='normalDisplay-scrollToTop' class='cursor-pointer text-white fixed bottom-5 right-2'><img class='w-[50px] h-[50px]' src='public/arrow-up.png'/></div>
+   <div if-click='normalDisplay-scrollToTop' class='cursor-pointer text-white fixed bottom-5 right-0 lg:right-2'><img class='w-[50px] h-[50px]' src='public/arrow-up.png'/></div>
   </div>
  `
 }
