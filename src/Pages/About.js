@@ -81,12 +81,14 @@ export const About = () => {
   return `
    <div class="bg-gradient-to-r min-h-[100vh] from-[#232b2b] to-[#232b2b] p-8 rounded-md shadow-md p-8 rounded-md shadow-md w-full animate__animated animate__fadeIn">
       <div class='flex mb-5'>
-        <div class="typewriter">
-            <span>H</span>
-            <span>e</span>
-            <span>l</span>
-            <span>l</span>
-            <span>o</span>
+        <div>
+          <div class="typewriter w-[fit-content]">
+              <span>H</span>
+              <span>e</span>
+              <span>l</span>
+              <span>l</span>
+              <span>o</span>
+          </div>
         </div>
       </div>
 
@@ -95,9 +97,11 @@ export const About = () => {
        <p class="text-gray-100">
         <ul class='flex flex-col text-white'>
           <li>- I am an aspiring web developer</li>
-          <li>- I love to build stuffs</li>
+          <li>- I like to build stuffs</li>
         </ul>
        </p>
+       <p class="text-white mt-[15px] italic text-lg">"Not the brightest but resourceful"</p>
+
      </div>
 
 
@@ -111,6 +115,7 @@ export const About = () => {
           <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/jscript.png"/></li>
           <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/react.png"/></li>
           <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/nextjs.png"/></li>
+          <li class='flex items-center'><img class='rounded w-[50px] h-[50px]' src="public/python.png"/></li>
         </ul>
        </p>
      </div>

@@ -57,3 +57,44 @@
 .slide-in-from-right {
  animation: slideInFromRight .5s ease;
 }
+
+
+.separator {
+ position: relative;
+ display: flex;
+ align-items: center;
+}
+
+.separator::before {
+ content: '';
+ position: relative;
+ height: 300px;
+ width: 1px;
+ /* Adjust the thickness of the line */
+ background-color: rgb(75, 85, 99);
+ /* Adjust the color of the line */
+ left: 50%;
+ transform: translateX(-50%);
+}
+
+.separator-nav {
+ position: relative;
+ display: flex;
+ align-items: center;
+}
+
+.separator-nav::before {
+ content: '';
+ position: relative;
+ height: 50px;
+ width: 1px;
+ /* Adjust the thickness of the line */
+ background-color: rgb(75, 85, 99);
+ /* Adjust the color of the line */
+ left: 50%;
+ transform: translateX(-50%);
+}
+
+.three-d-container:hover {
+ transform: perspective(1000px) rotateX(10deg);
+}

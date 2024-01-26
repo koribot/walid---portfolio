@@ -42,10 +42,14 @@ export const DisplayLists = (Display) => {
   ` },
     {
       name: 'eBex Web Scraper', repo: 'https://github.com/koribot/ebex-scraper-web', live: 'https://ebex-scraper-web.vercel.app', desc: `
-      A nextjs web version of my chrome extension - UNDER 🚧. 
-  ` },
+      A nextjs web version of my chrome extension - UNDER 🚧. `
+    },
+    {
+      name: 'Waan Trading - Ecommerce', repo: 'https://github.com/koribot/waantrading-react', live: 'https://waantrading-react.vercel.app', desc: `
+      A simple ecommerce website using react - UNDER 🚧. `
+    },
   ]
-  const lists = { pages: Pages, games: Games, projects: Projects }
+  const lists = { pages: Pages, projects: Projects }
 
   return `
   ${lists[Display] ? `<div class='wrapper'>

@@ -64,7 +64,7 @@ const mediaQuery = window.matchMedia('(min-width: 700px)');
 // Function to handle the changes in screen size
 export function handleScreenSizeChange(event) {
   if (event.matches) {
-    var currentMode = window.localStorage.getItem('mode');
+    const currentMode = window.localStorage.getItem('mode');
     if (currentMode) {
       window.localStorage.setItem('mode', currentMode)
       window.localStorage.setItem('window', 'pc')

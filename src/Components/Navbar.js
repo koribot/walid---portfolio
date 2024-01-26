@@ -1,4 +1,5 @@
 import { setScript, setState, states } from "../Kori/Kori.js"
+import smoothScroll from "../utils/smoothScroll.js"
 import { Description } from "./Description.js"
 
 
@@ -26,6 +27,24 @@ setScript(
                 }
 
             )
+        },
+        aboutClick: () => {
+            const aboutElement = document.querySelector('div[ref="about"]');
+            if (aboutElement) {
+                smoothScroll(aboutElement, 80, 200)
+            }
+        },
+        projectsClick: () => {
+            const projectsElement = document.querySelector('div[ref="projects"]');
+            if (projectsElement) {
+                smoothScroll(projectsElement, 160, 300)
+            }
+        },
+        contactClick: () => {
+            const contactElement = document.querySelector('div[ref="contact"]');
+            if (contactElement) {
+                smoothScroll(contactElement, 160, 400)
+            }
         }
 
     }
@@ -60,15 +79,10 @@ ${states.mode.mode === 'cmd'
                 </button>
                 
                 <ul class="hidden lg:flex space-x-4 text-white">
-                    
-                    <li><a href="#" class="hover:text-gray-300">About</a></li>
-                    
-                    <li><a href="#" class="hover:text-gray-300">Projects</a></li>
-                    
-                    <li><a href="#" class="hover:text-gray-300">Contact</a></li>
-                    
+                    <li if-click='navbar-aboutClick' class="cursor-pointer hover:text-gray-300">About</li>
+                    <li if-click='navbar-projectsClick' class="cursor-pointer hover:text-gray-300">Projects</li>
+                    <li if-click='navbar-contactClick' class="cursor-pointer hover:text-gray-300">Contact</li>
                 </ul>
-                
                 </div>
             </nav>
 
@@ -78,10 +92,9 @@ ${states.mode.mode === 'cmd'
                 </button>
             
                 <ul id="mobile-menu-items" class="${states.navbar.open ? "block" : "hidden"} bg-gray-800 p-2 space-y-2 flex flex-col justify-center items-center">
-                <li><a href="#" class="block text-white">Home</a></li>
-                <li><a href="#" class="block text-white">About</a></li>
-                <li><a href="#" class="block text-white">Projects</a></li>
-                <li><a href="#" class="block text-white">Contact</a></li>
+                <li if-click='navbar-aboutClick' class="cursor-pointer block text-white">About</li>
+                <li if-click='navbar-projectsClick' class="cursor-pointer block text-white">Projects</li>
+                <li if-click='navbar-contactClick' class="cursor-pointer block text-white">Contact</li>
                 </ul>
             </div>
 `

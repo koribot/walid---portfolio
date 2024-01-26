@@ -14,9 +14,9 @@ setState(
     inputValue: '',
     commands: ['Help', 'Go to', 'Display *'],
     commandLists: [
-      { command: 'Goto', desc: 'Go to pages', eg: 'Goto /home' },
-      { command: 'Display', desc: 'Display lists of Options[Pages, Games, Projects]', eg: 'Display Pages' },
-      { command: 'Play', desc: 'Play a game', eg: 'Play Snake' },
+      { command: 'Goto', desc: 'Go to pages', eg: 'Goto /' },
+      { command: 'Display', desc: 'Display lists of Options[Pages, Projects]', eg: 'Display Pages' },
+      // { command: 'Play', desc: 'Play a game', eg: 'Play Snake' },
       { command: 'Clear', desc: 'Clear Console', eg: 'Clear' },
     ],
 

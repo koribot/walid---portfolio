@@ -2,6 +2,7 @@ import app from "./app.js"
 import About from "./Pages/About.js"
 import NotFound from "./Pages/404.js";
 import { states } from "./Kori/Kori.js";
+import Projects from "./Pages/Projects.js";
 
 
 export const routes = () => {
@@ -10,7 +11,8 @@ export const routes = () => {
  if (states.mode.mode === 'cmd') {
   routes = {
    "/": app,
-   "/about": About
+   "/about": About,
+   "/projects": Projects
   }
  } else {
   routes = {
