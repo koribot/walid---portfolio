@@ -64,7 +64,7 @@ export const NormalDisplay = () => {
         </div>
   
         <div class='overflow-hidden hidden md:block lg:block'>
-          <img class='slide-in-from-right ' src='public/walid-cawasa-profile.png'/>
+          <img class='slide-in-from-right ' src='public/walid-cawasa-profile2.png'/>
         </div>
       </div>
    </div>
@@ -130,6 +130,15 @@ export const NormalDisplay = () => {
               <a class='mt-[15px] border px-[5px] hover:bg-gray-500' href='prevReload-https://github.com/koribot/waantrading-react' target='_blank'>Repo</a>
             </div>
 
+            <div class='flex flex-col justify-start items-center'>
+              <span class='hover:bg-gray-600 p-5 flex flex-col gap-[5px] rounded justify-center items-center'>
+                <img class='object-contain w-[400px] h-[200px]' src='public/internship.png'/>
+              <p>Internship Project - ACS-MEDISKIN-WEB</p>
+              <p class="italic text-lg">“My Intership Project - React, TypeScript"
+              </p>
+              </span>
+            </div>
+
           </div>
           <h1 class='text-white mt-[20px] lg:text-2xl'>${insert('</Projects>')}</h1>
       </div>
@@ -154,7 +163,7 @@ export const NormalDisplay = () => {
                       Facebook: <a class='ml-1 cursor-pointer underline' href='prevReload-https://www.facebook.com/wcawasa' target='_blank'> @wcawasa</a>
                     </li>
                     <li>
-                      Github: <a class='ml-1' href='prevReload-https://github.com/koribot' target='_blank'> @koribot</a>
+                      Github: <a class='ml-1 cursor-pointer underline' href='prevReload-https://github.com/koribot' target='_blank'> @koribot</a>
                      </li>
                 </ul>
               <h1 class="lg:text-2xl mt-5 text-center">

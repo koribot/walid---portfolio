@@ -18,6 +18,7 @@ setState(
       { command: 'Display', desc: 'Display lists of Options[Pages, Projects]', eg: 'Display Pages' },
       // { command: 'Play', desc: 'Play a game', eg: 'Play Snake' },
       { command: 'Clear', desc: 'Clear Console', eg: 'Clear' },
+      { command: 'Resume', desc: 'Access My Resume', eg: 'Resume' },
     ],
 
     prefixLists: ['Pages', 'Games', 'Projects'],
@@ -67,6 +68,9 @@ setScript(
     submit: (e) => {
       e.preventDefault()
       const targetValue = e.target[0].value.toLowerCase()
+      if (targetValue === 'resume') {
+        window.open('https://drive.google.com/file/d/1LCpzMEJshy-41bDaE8685Vd10mphbTui/view', '_blank')
+      }
       if (getDisplayLists(targetValue)[0] === 'goto') {
         router(null, getDisplayLists(targetValue)[1])
       }

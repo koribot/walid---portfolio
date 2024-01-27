@@ -48,6 +48,10 @@ export const DisplayLists = (Display) => {
       name: 'Waan Trading - Ecommerce', repo: 'https://github.com/koribot/waantrading-react', live: 'https://waantrading-react.vercel.app', desc: `
       A simple ecommerce website using react - UNDER 🚧. `
     },
+    {
+      name: 'Internship Project - ACS-MEDISKIN-WEB', desc: `
+      My Intership Project - React, TypeScript`
+    },
   ]
   const lists = { pages: Pages, projects: Projects }
 
@@ -82,12 +86,12 @@ export const DisplayLists = (Display) => {
           ?
           `
             <td class='text-white'>
-            <a href=${items.name !== 'eBextractor' ? `prevReload-${items.repo}` : '#'} target='_blank'>
+            <a href=${items.name !== 'eBextractor' && items.name !== 'Internship Project - ACS-MEDISKIN-WEB' ? `prevReload-${items.repo}` : '#'} target='_blank'>
             ${items.name !== 'eBextractor' ? `Click` : 'Repo is Private'}
             </a>
            </td>
            <td class='text-white'>
-           <a href=${items.name !== 'koribotJS' ? `prevReload-${items.live}` : '#'} target='_blank'>
+           <a href=${items.name !== 'koribotJS' && items.name !== 'Internship Project - ACS-MEDISKIN-WEB' ? `prevReload-${items.live}` : '#'} target='_blank'>
            ${items.name !== 'koribotJS' ? `Click` : 'No WebSite Yet'}
            </a>
            </td>
@@ -98,6 +102,7 @@ export const DisplayLists = (Display) => {
             ${items.path}
            </td>
             `
+
         }
             
              <td class='text-white'><pre>${items.desc}</pre></td>
