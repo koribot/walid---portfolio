@@ -45,6 +45,12 @@ setScript(
             if (contactElement) {
                 smoothScroll(contactElement, 160, 400)
             }
+        },
+        certificatesClick: () => {
+            const contactElement = document.querySelector('div[ref="certificates"]');
+            if (contactElement) {
+                smoothScroll(contactElement, 160, 400)
+            }
         }
 
     }
@@ -63,7 +69,7 @@ ${states.mode.mode === 'cmd'
                     ✨Welcome✨
                     </h1>  
                     <h1 class='text-[15px] text-[gray]'>
-                    ~~~This is only available for web not on mobile~~~
+                    ~~~This mode is only available for web not on mobile~~~
                     </h1>
                     ${Description()}   
             </div> `
@@ -89,6 +95,7 @@ ${states.mode.mode === 'cmd'
                     >
                     Resume
                     </a>
+                    <li if-click='navbar-certificatesClick' class="cursor-pointer block text-white">Certificates</li>
                 </ul>
                 </div>
             </nav>
@@ -109,6 +116,7 @@ ${states.mode.mode === 'cmd'
                     >
                     Resume
                 </a>
+                <li if-click='navbar-certificatesClick' class="cursor-pointer block text-white">Certificates</li>
                 </ul>
             </div>
 `

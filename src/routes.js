@@ -3,6 +3,7 @@ import About from "./Pages/About.js"
 import NotFound from "./Pages/404.js";
 import { states } from "./Kori/Kori.js";
 import Projects from "./Pages/Projects.js";
+import Certificates from "./Pages/Certificates.js";
 
 
 export const routes = () => {
@@ -12,7 +13,8 @@ export const routes = () => {
   routes = {
    "/": app,
    "/about": About,
-   "/projects": Projects
+   "/projects": Projects,
+   "/certificates": Certificates
   }
  } else {
   routes = {

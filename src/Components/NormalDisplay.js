@@ -2,6 +2,7 @@ import { setScript } from '../Kori/Kori.js';
 import '../styles/NormalDisplay.css'
 import scrollToTop from '../utils/scrollTop.js';
 import { insert } from './../Kori/insert';
+import { image_modal } from './../utils/image_modal';
 
 
 setScript(
@@ -9,6 +10,9 @@ setScript(
   {
     scrollToTop: () => {
       scrollToTop()
+    },
+    openModal: () => {
+      image_modal("public/ADUKASYON-CERTIFICATE.PNG")
     }
   }
 
@@ -146,6 +150,28 @@ export const NormalDisplay = () => {
 
    <div class='separator'>
    </div>
+
+   <div ref='certificates' class='px-[20px] lg:px-[60px] flex flex-col text-center justify-center items-center gap-5'>
+    <div class='border border-gray-600 rounded p-[15px]'>
+          <h1 class='mb-[10px] text-white lg:text-2xl'>${insert('<Certificates>')}</h1>
+          <div class='text-white grid lg:flex gap-5'>
+              <div class='flex flex-col justify-start items-center'>
+                  <span class='hover:bg-gray-600 px-5 flex flex-col gap-[5px] rounded justify-center items-center'>
+                    <img class='object-contain w-[400px] h-[200px]' src='public/ADUKASYON-CERTIFICATE.png'/>
+                    <p>September 19, 2023</p>
+                    <p class="italic text-lg">"ADUKASYON PH CERTIFICATE"</p>
+                  </span>
+                  <button if-click='normalDisplay-openModal' class=' mt-[15px] border px-[5px] hover:bg-gray-500'>View</button>
+              </div>
+          </div>
+          <h1 class='text-white mt-[20px] lg:text-2xl'>${insert('</Certificates>')}</h1>
+      </div>
+   </div>
+
+
+   <div class='separator'>
+   </div>
+
 
    <div ref='contact' class='flex justify-center'>
       <div class="container mx-auto px-8 flex justify-center">

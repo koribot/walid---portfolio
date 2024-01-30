@@ -19,6 +19,7 @@ setState(
       // { command: 'Play', desc: 'Play a game', eg: 'Play Snake' },
       { command: 'Clear', desc: 'Clear Console', eg: 'Clear' },
       { command: 'Resume', desc: 'Access My Resume', eg: 'Resume' },
+      { command: 'Cert', desc: 'View All of my certificates (can also be access using goto certificates)', eg: 'Cert' },
     ],
 
     prefixLists: ['Pages', 'Games', 'Projects'],
@@ -75,6 +76,9 @@ setScript(
         router(null, getDisplayLists(targetValue)[1])
       }
 
+      if (targetValue === 'cert') {
+        router(null, 'certificates')
+      }
       const r = states.CmdDisplay.resultLists
 
       if (isValidCommand(targetValue)) {

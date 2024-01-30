@@ -12,7 +12,7 @@ export const Description = () => {
   return `
    <div class='flex justify-center mt-[50px] w-[100%]'>
    <div class='wrapper'>
-     <h1 class='text-white'>Options</h1>
+     <h1 class='text-white'>Options (not case-sensitive)</h1>
      <table class='custom-table'>
         <thead>
           <tr>
