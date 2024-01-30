@@ -12,7 +12,7 @@ setScript(
       scrollToTop()
     },
     openModal: () => {
-      image_modal("public/ADUKASYON-CERTIFICATE.PNG")
+      image_modal("public/ADUKASYON-CERTIFICATE.png")
     }
   }
 
