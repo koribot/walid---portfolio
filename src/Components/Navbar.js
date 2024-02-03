@@ -89,7 +89,7 @@ ${states.mode.mode === 'cmd'
                     <li if-click='navbar-projectsClick' class="cursor-pointer hover:text-gray-300">Projects</li>
                     <li if-click='navbar-contactClick' class="cursor-pointer hover:text-gray-300">Contact</li>
                     <a 
-                    href='prevReload-https://drive.google.com/file/d/1LCpzMEJshy-41bDaE8685Vd10mphbTui/view?usp=sharing' 
+                    href='prevReload-https://drive.google.com/file/d/1DBueMYucU3LDrz5Yhd8k4ZvAtrxoHWu5/view' 
                     class="cursor-pointer hover:text-gray-300"
                     target='_blank'
                     >

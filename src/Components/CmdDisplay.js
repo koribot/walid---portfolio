@@ -70,7 +70,7 @@ setScript(
       e.preventDefault()
       const targetValue = e.target[0].value.toLowerCase()
       if (targetValue === 'resume') {
-        window.open('https://drive.google.com/file/d/1LCpzMEJshy-41bDaE8685Vd10mphbTui/view', '_blank')
+        window.open('https://drive.google.com/file/d/1DBueMYucU3LDrz5Yhd8k4ZvAtrxoHWu5/view', '_blank')
       }
       if (getDisplayLists(targetValue)[0] === 'goto') {
         router(null, getDisplayLists(targetValue)[1])
