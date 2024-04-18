@@ -67,7 +67,7 @@ export const Projects = () => {
             <pre class="text-gray-100 mb-4">${project.desc}</pre>
             <div class="flex">
               ${project.repo ? `<a class="text-blue-500 mr-4" href="prevReload-${project.repo}" target="_blank">Repository</a>` : ''}
-              ${project.live ? `<a class="text-green-500" href="${project.live}" target="_blank">Live Demo</a>` : ''}
+              ${project.live ? `<a class="text-green-500" href="prevReload-${project.live}" target="_blank">Live Demo</a>` : ''}
             </div>
           </div>
         </div>
