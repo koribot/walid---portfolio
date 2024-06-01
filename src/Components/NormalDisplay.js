@@ -68,7 +68,7 @@ export const NormalDisplay = () => {
         </div>
   
         <div class='overflow-hidden hidden md:block lg:block'>
-          <img class='slide-in-from-right ' src='public/walid-cawasa-profile2.png'/>
+          <img class='slide-in-from-right' src='public/walid-cawasa-profile2.jpg'/>
         </div>
       </div>
    </div>
