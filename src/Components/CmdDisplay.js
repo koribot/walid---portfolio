@@ -20,6 +20,7 @@ setState(
       { command: 'Clear', desc: 'Clear Console', eg: 'Clear' },
       { command: 'Resume', desc: 'Access My Resume', eg: 'Resume' },
       { command: 'Cert', desc: 'View All of my certificates (can also be access using goto certificates)', eg: 'Cert' },
+      { command: 'github', desc: 'My github account', eg: 'github' },
     ],
 
     prefixLists: ['Pages', 'Games', 'Projects'],
@@ -70,12 +71,14 @@ setScript(
       e.preventDefault()
       const targetValue = e.target[0].value.toLowerCase()
       if (targetValue === 'resume') {
-        window.open('https://drive.google.com/file/d/1DBueMYucU3LDrz5Yhd8k4ZvAtrxoHWu5/view', '_blank')
+        window.open('https://drive.google.com/file/d/111hkpKt6UJlWS5QnMoCpfnVXbQHAC6I3/view', '_blank')
       }
       if (getDisplayLists(targetValue)[0] === 'goto') {
         router(null, getDisplayLists(targetValue)[1])
       }
-
+      if (targetValue === 'github') {
+         window.open('https://github.com/koribot', '_blank')
+      }
       if (targetValue === 'cert') {
         router(null, 'certificates')
       }
@@ -115,8 +118,6 @@ setScript(
 
 
 export const CmdDisplay = () => {
-
-
   return `
    <div class='w-full h-full p-[50px] '>
     <div class='bg-[gray] p-[2px]'>

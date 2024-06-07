@@ -89,13 +89,20 @@ ${states.mode.mode === 'cmd'
                     <li if-click='navbar-projectsClick' class="cursor-pointer hover:text-gray-300">Projects</li>
                     <li if-click='navbar-contactClick' class="cursor-pointer hover:text-gray-300">Contact</li>
                     <a 
-                    href='prevReload-https://drive.google.com/file/d/1DBueMYucU3LDrz5Yhd8k4ZvAtrxoHWu5/view' 
+                    href='prevReload-https://drive.google.com/file/d/111hkpKt6UJlWS5QnMoCpfnVXbQHAC6I3/view' 
                     class="cursor-pointer hover:text-gray-300"
                     target='_blank'
                     >
                     Resume
                     </a>
                     <li if-click='navbar-certificatesClick' class="cursor-pointer block text-white">Certificates</li>
+                    <a 
+                        href='prevReload-https://github.com/koribot' 
+                        class="cursor-pointer block text-white"
+                        target='_blank'
+                    >
+                    Github
+                    </a>
                 </ul>
                 </div>
             </nav>
@@ -117,6 +124,13 @@ ${states.mode.mode === 'cmd'
                     Resume
                 </a>
                 <li if-click='navbar-certificatesClick' class="cursor-pointer block text-white">Certificates</li>
+                <a 
+                    href='prevReload-https://github.com/koribot' 
+                    class="cursor-pointer block text-white"
+                    target='_blank'
+                >
+                Github
+                </a>
                 </ul>
             </div>
 `
